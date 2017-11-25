@@ -1,0 +1,27 @@
+$breakpoint-small:  em(480px) !default;
+$breakpoint-medium: em(640px) !default;
+$breakpoint-large:  em(960px) !default;
+
+@mixin breakpoint($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin breakpoint-small {
+  @include breakpoint($breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin breakpoint-medium {
+  @include breakpoint($breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin breakpoint-large {
+  @include breakpoint($breakpoint-large) {
+    @content;
+  }
+}

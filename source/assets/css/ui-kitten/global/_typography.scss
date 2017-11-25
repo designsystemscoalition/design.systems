@@ -1,0 +1,57 @@
+$font-weight-thin:      200               !default;
+$font-weight-light:     300               !default;
+$font-weight:           400               !default;
+$font-weight-semi-bold: 500               !default;
+$font-weight-bold:      600               !default;
+$font-size:             rem($base-size)   !default;
+$font-size-large:       $font-size * 1.5  !default;
+$font-size-x-large:     $font-size * 2    !default;
+$font-size-xx-large:    $font-size * 3    !default;
+$font-size-xxx-large:   $font-size * 4    !default;
+$font-size-xxxx-large:  $font-size * 5    !default;
+$line-height:           $baseline-ratio   !default;
+$line-height-reset:     1                 !default;
+
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+
+@mixin type {
+  font: {
+    weight: $font-weight;
+    size:   $font-size;
+  };
+}
+
+@mixin type-heading-large {
+  font: {
+    weight: $font-weight-bold;
+    size:   $font-size-large;
+  };
+}
+
+@mixin type-heading-x-large {
+  font: {
+    weight: $font-weight-semi-bold;
+    size:   $font-size-x-large;
+  };
+}
+
+@mixin type-heading-xx-large {
+  font: {
+    weight: $font-weight;
+    size:   $font-size-xx-large;
+  };
+}
+
+@mixin type-heading-xxx-large {
+  font: {
+    weight: $font-weight-light;
+    size:   $font-size-xxx-large;
+  };
+}
+
+@mixin type-heading-xxxx-large {
+  font: {
+    weight: $font-weight-thin;
+    size:   $font-size-xxxx-large;
+  };
+}

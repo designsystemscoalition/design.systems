@@ -1,0 +1,21 @@
+$base-size:         16px                         !default;
+$baseline-ratio:    1.5                          !default;
+$baseline-computed: $base-size * $baseline-ratio !default;
+
+@function em($pixels) {
+  @return ($pixels / $base-size * 1em);
+}
+
+@function rem($pixels) {
+  @return ($pixels / $base-size * 1rem);
+}
+
+$spacing-vertical:           rem($baseline-computed)        !default;
+$spacing-vertical-em:        $spacing-vertical / 1rem * 1em !default;
+$spacing-vertical-small:     $spacing-vertical / 2          !default;
+$spacing-vertical-large:     $spacing-vertical * 2          !default;
+$spacing-horizontal:         rem($base-size)                !default;
+$spacing-horizontal-large:   $spacing-horizontal * 2        !default;
+$spacing-horizontal-x-large: $spacing-horizontal-large * 2  !default;
+$max-width-page:             rem(1280px)                    !default;
+$max-width-measure:          em(640px)                      !default;

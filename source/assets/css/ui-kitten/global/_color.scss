@@ -1,0 +1,22 @@
+// Choices
+@import '../vendor/open-color';
+
+// Global Decisions
+$border-color:               $oc-gray-8 !default;
+$background-color:           $oc-black  !default;
+$color:                      $oc-gray-2 !default;
+$color-link:                 $oc-cyan-6 !default;
+$color-link-focus:           $oc-cyan-3 !default;
+$color-link-active:          $oc-cyan-0 !default;
+$color-heading:              $oc-gray-4 !default;
+
+$background-color-selection: $oc-cyan-0 !default;
+$color-selection:            $oc-black  !default;
+
+$border-color-inverse:       $oc-gray-3 !default;
+$background-color-inverse:   $oc-white  !default;
+$color-inverse:              $oc-gray-8 !default;
+$color-link-inverse:         $oc-cyan-9 !default;
+$color-link-focus-inverse:   $oc-gray-7 !default;
+$color-link-active-inverse:  $oc-gray-9 !default;
+$color-heading-inverse:      $oc-gray-7 !default;

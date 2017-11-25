@@ -1,0 +1,39 @@
+@mixin theme($theme-border-color:      $border-color,
+             $theme-background-color:  $background-color,
+             $theme-color:             $color,
+             $theme-color-link:        $color-link,
+             $theme-color-link-focus:  $color-link-focus,
+             $theme-color-link-active: $color-link-active,
+             $theme-color-heading:     $color-heading) {
+  background: $theme-background-color;
+  color:      $theme-color;
+
+  a {
+    color: $theme-color-link;
+
+    &:hover,
+    &:focus { color: $theme-color-link-focus; }
+
+    &:active { color: $theme-color-link-active; }
+  }
+
+  #{$heading-elements} { color: $theme-color-heading; }
+
+  hr { border-color: $theme-border-color; }
+}
+
+
+
+.uik-t-default { @include theme; }
+
+
+
+.uik-t-inverse {
+  @include theme($border-color-inverse,
+                 $background-color-inverse,
+                 $color-inverse,
+                 $color-link-inverse,
+                 $color-link-focus-inverse,
+                 $color-link-active-inverse,
+                 $color-heading-inverse);
+}

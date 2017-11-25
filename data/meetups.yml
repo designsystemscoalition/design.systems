@@ -1,0 +1,45 @@
+# Enter in order of creation, please (add new cities to the bottom)
+-
+  title:    'SF DSC'
+  city:     'San Francisco'
+  url:      'https://www.sfdsc.co'
+  twitter:  'sf_dsc'
+  approved: true
+  organizers:
+    -
+      name: 'Jina Anne'
+      url:  'http://jina.me/'
+      lead: true
+
+    -
+      name: 'Josh Silverman'
+      url:  'http://www.mynameisjoshsilverman.com/'
+
+
+
+-
+  title:    'NYC DSC'
+  city:     'New York City'
+  url:      'http://designsystems.nyc/'
+  twitter:  'nyc_dsc'
+  approved: true
+  organizers:
+    -
+      name: 'Diana Mounter'
+      url:  'http://broccolini.net/'
+      lead: true
+    -
+      name: 'Tom Takigayama'
+      url:  'http://www.tomtaki.com/'
+
+
+
+-
+  title:    'LDN DSC'
+  city:     'London'
+  twitter:  'ldn_dsc'
+  approved: true
+  organizers:
+    -
+      name: 'Stu Robson'
+      url:  'http://www.alwaystwisted.com/'

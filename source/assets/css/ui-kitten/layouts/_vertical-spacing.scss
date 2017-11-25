@@ -1,0 +1,24 @@
+.uik-l {
+  &-margin {
+    &-top-none    { margin-top:    0; }
+    &-bottom-none { margin-bottom: 0; }
+  }
+
+
+
+  &-padding {
+    &-top {
+      padding-top: $spacing-vertical;
+
+      &-small  { padding-top: $spacing-vertical-small;  }
+      &-large  { padding-top: $spacing-vertical-large;  }
+    }
+
+    &-bottom {
+      padding-bottom: $spacing-vertical;
+
+      &-small  { padding-bottom: $spacing-vertical-small;  }
+      &-large  { padding-bottom: $spacing-vertical-large;  }
+    }
+  }
+}

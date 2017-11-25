@@ -1,0 +1,165 @@
+/* Modified from
+ * https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/grid.css
+ */
+
+.uik-l-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  list-style: none;
+
+  &__cell { flex: 1; }
+
+  &--flex-cells > .uik-l-grid__cell { display: flex; }
+
+  &--top    { align-items: flex-start; }
+  &--bottom { align-items: flex-end;   }
+  &--center { align-items: center;     }
+
+  &--justify-center { justify-content: center; }
+
+  &__cell--top       { align-self: flex-start; }
+  &__cell--bottom    { align-self: flex-end;   }
+  &__cell--center    { align-self: center;     }
+  &__cell--auto-size { flex:       none;       }
+
+  &--fit    > .uik-l-grid__cell { flex: 1;                     }
+  &--full   > .uik-l-grid__cell { flex: 0 0 #{(100 / 1) * 1%}; }
+  &--1-of-2 > .uik-l-grid__cell { flex: 0 0 #{(100 / 2) * 1%}; }
+  &--1-of-3 > .uik-l-grid__cell { flex: 0 0 #{(100 / 3) * 1%}; }
+  &--1-of-4 > .uik-l-grid__cell { flex: 0 0 #{(100 / 4) * 1%}; }
+
+  &--gutters {
+    margin: 0 0 0 #{-$spacing-horizontal};
+
+    > .uik-l-grid__cell {
+      padding: 0 0 0 $spacing-horizontal;
+    }
+
+    &-large {
+      margin: 0 0 0 #{-$spacing-horizontal-large};
+
+      > .uik-l-grid__cell {
+        padding: 0 0 0 $spacing-horizontal-large;
+      }
+    }
+
+    &-x-large {
+      margin: 0 0 0 #{-$spacing-horizontal-x-large};
+
+      > .uik-l-grid__cell {
+        padding: 0 0 0 $spacing-horizontal-x-large;
+      }
+    }
+  }
+}
+
+
+
+@mixin grids-small {
+  .uik-l-small-grid {
+    &--fit    > .uik-l-grid__cell { flex: 1;                     }
+    &--full   > .uik-l-grid__cell { flex: 0 0 #{(100 / 1) * 1%}; }
+    &--1-of-2 > .uik-l-grid__cell { flex: 0 0 #{(100 / 2) * 1%}; }
+    &--1-of-3 > .uik-l-grid__cell { flex: 0 0 #{(100 / 3) * 1%}; }
+    &--1-of-4 > .uik-l-grid__cell { flex: 0 0 #{(100 / 4) * 1%}; }
+
+    &--gutters {
+      margin: 0 0 0 #{-$spacing-horizontal};
+
+      > .uik-l-grid__cell {
+        padding: 0 0 0 $spacing-horizontal;
+      }
+
+      &-large {
+        margin: 0 0 0 #{-$spacing-horizontal-large};
+
+        > .uik-l-grid__cell {
+          padding: 0 0 0 $spacing-horizontal-large;
+        }
+      }
+
+      &-x-large {
+        margin: 0 0 0 #{-$spacing-horizontal-x-large};
+
+        > .uik-l-grid__cell {
+          padding: 0 0 0 $spacing-horizontal-x-large;
+        }
+      }
+    }
+  }
+}
+
+
+
+@mixin grids-medium {
+  .uik-l-medium-grid {
+    &--fit    > .uik-l-grid__cell { flex: 1;                     }
+    &--full   > .uik-l-grid__cell { flex: 0 0 #{(100 / 1) * 1%}; }
+    &--1-of-2 > .uik-l-grid__cell { flex: 0 0 #{(100 / 2) * 1%}; }
+    &--1-of-3 > .uik-l-grid__cell { flex: 0 0 #{(100 / 3) * 1%}; }
+    &--1-of-4 > .uik-l-grid__cell { flex: 0 0 #{(100 / 4) * 1%}; }
+
+    &--gutters {
+      margin: 0 0 0 #{-$spacing-horizontal};
+
+      > .uik-l-grid__cell {
+        padding: 0 0 0 $spacing-horizontal;
+      }
+
+      &-large {
+        margin: 0 0 0 #{-$spacing-horizontal-large};
+
+        > .uik-l-grid__cell {
+          padding: 0 0 0 $spacing-horizontal-large;
+        }
+      }
+
+      &-x-large {
+        margin: 0 0 0 #{-$spacing-horizontal-x-large};
+
+        > .uik-l-grid__cell {
+          padding: 0 0 0 $spacing-horizontal-x-large;
+        }
+      }
+    }
+  }
+}
+
+
+
+@mixin grids-large {
+  .uik-l-large-grid {
+    &--fit    > .uik-l-grid__cell { flex: 1;                     }
+    &--full   > .uik-l-grid__cell { flex: 0 0 #{(100 / 1) * 1%}; }
+    &--1-of-2 > .uik-l-grid__cell { flex: 0 0 #{(100 / 2) * 1%}; }
+    &--1-of-3 > .uik-l-grid__cell { flex: 0 0 #{(100 / 3) * 1%}; }
+    &--1-of-4 > .uik-l-grid__cell { flex: 0 0 #{(100 / 4) * 1%}; }
+
+    &--gutters {
+      margin: 0 0 0 #{-$spacing-horizontal};
+
+      > .uik-l-grid__cell {
+        padding: 0 0 0 $spacing-horizontal;
+      }
+
+      &-large {
+        margin: 0 0 0 #{-$spacing-horizontal-large};
+
+        > .uik-l-grid__cell {
+          padding: 0 0 0 $spacing-horizontal-large;
+        }
+      }
+
+      &-x-large {
+        margin: 0 0 0 #{-$spacing-horizontal-x-large};
+
+        > .uik-l-grid__cell {
+          padding: 0 0 0 $spacing-horizontal-x-large;
+        }
+      }
+    }
+  }
+}

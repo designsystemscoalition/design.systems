@@ -1,0 +1,11 @@
+.uik-l-container {
+  margin: {
+    right: auto;
+    left:  auto;
+  };
+  padding: {
+    right: $spacing-horizontal-large;
+    left:  $spacing-horizontal-large;
+  };
+  max-width: $max-width-page;
+}

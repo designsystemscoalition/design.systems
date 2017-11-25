@@ -1,0 +1,4 @@
+@include breakpoint-small {
+  @include base-small;
+  @include grids-medium;
+}

@@ -1,0 +1,80 @@
+<% if data.meetups.present? %>
+  <nav role="navigation">
+    <ul class="uik-l-grid uik-l-grid--gutters-x-large uik-l-grid--full uik-l-large-grid--fit">
+      <% data.meetups.each do |m| %>
+        <% if m.approved == true %>
+          <li class="uik-l-grid__cell">
+            <% if m.title.present? %>
+              <h3>
+                <% if m.url.present? %>
+                  <a href="<%= m.url %>">
+                <% end %>
+
+                <%= m.title %>
+
+                <% if m.url.present? %>
+                  </a>
+                <% end %>
+              </h3>
+            <% end %>
+
+            <p>
+              <% if m.city.present? %>
+                <%= m.city %> <%= data.site.title %>
+              <% end %>
+
+              <% if m.twitter.present? %>
+                <br />
+
+                <a href="https://twitter.com/<%= m.twitter %>">
+                  @<%= m.twitter %>
+                </a>
+              <% end %>
+            </p>
+
+            <% if m.organizers.present? %>
+              <p class="uik-l-margin-bottom-none">Organizers:</p>
+
+              <ul class="uik-l-margin-top-none">
+                <% m.organizers.each do |o| %>
+                  <li>
+                    <% if o.url.present? %>
+                      <a href="<%= o.url %>">
+                    <% end %>
+
+                    <% if o.name.present? %><%= o.name %><% end %>
+
+                    <% if o.url.present? %>
+                      </a>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </nav>
+<% end %>
+
+<div class="uik-l-grid uik-l-grid--gutters-x-large uik-l-grid--full uik-l-large-grid--fit">
+  <div class="uik-l-grid__cell">
+    <h2>DSC Guidelines</h2>
+
+    <p>
+      Design Systems Coalition was founded by
+      <a href="http://jina.me">Jina Anne</a>. To use the “Design Systems
+      Coalition” name, you must agree and adhere to the DSC guidelines, and get
+      approval by Jina. Once you’ve been approved, you’ll be added to this site.
+    </p>
+
+    <p>
+      <strong>Guidelines in progress; coming soon&hellip;</strong>
+      In the meantime, you can checkout the guidelines for
+      <%= link_to "SF DSC", "https://www.sfdsc.co/about/" %>
+      and
+      <%= link_to "NYC DSC", "https://github.com/design-systems-coalition-NYC/meetup/tree/master/docs" %>.
+    </p>
+  </div>
+</div>

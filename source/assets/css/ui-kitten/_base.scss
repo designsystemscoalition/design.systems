@@ -1,0 +1,83 @@
+/* BASE */
+
+$heading-elements: h1, h2, h3               !default;
+$block-elements:   $heading-elements, p, ul !default;
+
+
+
+html {
+  font-size: 100%;
+  line-height: $line-height;
+}
+
+body {
+  @include type;
+  line-height: $line-height;
+  font-family: $font-family;
+  background: transparent;
+}
+
+::selection {
+  background: $background-color-selection;
+  color: $color-selection;
+  text-shadow: none;
+}
+
+a { text-decoration: none; }
+
+#{$block-elements},
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+#{$block-elements} {
+  margin: {
+    top: $spacing-vertical-em;
+    bottom: $spacing-vertical;
+  }
+  max-width: $max-width-measure;
+}
+
+#{$heading-elements} { line-height: $line-height-reset; }
+
+h1 { @include type-heading-xx-large; }
+h2 { @include type-heading-x-large;  }
+h3 { @include type-heading-large;    }
+
+ul ul { margin-left: $spacing-horizontal-large; }
+
+hr,
+fieldset { border: 0; }
+
+hr {
+  display: block;
+  margin: #{em($baseline-computed) - $border-width} 0;
+  height: $border-width;
+  border-top: {
+    width: $border-width;
+    style: $border-style;
+  };
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video { vertical-align: middle; }
+
+textarea { resize: vertical; }
+
+@mixin base-small {
+  // styles
+}
+
+@mixin base-medium {
+  h1 { @include type-heading-xxx-large; }
+  h2 { @include type-heading-xx-large;  }
+}
+
+@mixin base-large {
+  h1 { @include type-heading-xxxx-large; }
+}
