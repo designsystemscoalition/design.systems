@@ -34,12 +34,19 @@
         </div>
       </div>
 
-      <div class="uik-t-inverse">
-        <div class="uik-l-container uik-l-padding-top-large uik-l-padding-bottom-large">
-          <div class="uik-l-grid uik-l-grid--gutters">
-            <div class="uik-l-grid__cell"><%= yield %></div>
-          </div>
+      <% if current_page.data.home != 'true' %>
+        <div class="uik-t-inverse">
+      <% end %>
+
+      <div class="uik-l-container uik-l-padding-top-large uik-l-padding-bottom-large">
+        <div class="uik-l-grid uik-l-grid--gutters">
+          <div class="uik-l-grid__cell"><%= yield %></div>
         </div>
+      </div>
+
+      <% if current_page.data.home != 'true' %>
+        </div>
+      <% end %>
       </div>
     </main>
 

@@ -1,10 +1,14 @@
-@mixin theme($theme-border-color:      $border-color,
-             $theme-background-color:  $background-color,
-             $theme-color:             $color,
-             $theme-color-link:        $color-link,
-             $theme-color-link-focus:  $color-link-focus,
-             $theme-color-link-active: $color-link-active,
-             $theme-color-heading:     $color-heading) {
+@mixin theme($theme-border-color:                   $border-color,
+             $theme-background-color:               $background-color,
+             $theme-background-color-button:        $background-color-button,
+             $theme-background-color-button-focus:  $background-color-button-focus,
+             $theme-background-color-button-active: $background-color-button-active,
+             $theme-color:                          $color,
+             $theme-color-link:                     $color-link,
+             $theme-color-link-focus:               $color-link-focus,
+             $theme-color-link-active:              $color-link-active,
+             $theme-color-heading:                  $color-heading,
+             $theme-color-button:                   $color-button) {
   background: $theme-background-color;
   color:      $theme-color;
 
@@ -20,6 +24,21 @@
   #{$heading-elements} { color: $theme-color-heading; }
 
   hr { border-color: $theme-border-color; }
+
+  .uik-c-button {
+    background-color: $theme-background-color-button;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active { color: $theme-color-button; }
+
+    &:hover,
+    &:focus { background-color: $theme-background-color-button-focus; }
+
+    &:active { background-color: $theme-background-color-button-active; }
+  }
+
 }
 
 
@@ -31,9 +50,13 @@
 .uik-t-inverse {
   @include theme($border-color-inverse,
                  $background-color-inverse,
+                 $background-color-button-inverse,
+                 $background-color-button-focus-inverse,
+                 $background-color-button-active-inverse,
                  $color-inverse,
                  $color-link-inverse,
                  $color-link-focus-inverse,
                  $color-link-active-inverse,
-                 $color-heading-inverse);
+                 $color-heading-inverse,
+                 $color-button-inverse);
 }

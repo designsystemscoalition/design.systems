@@ -2,21 +2,36 @@
 @import '../vendor/open-color';
 
 // Global Decisions
-$border-color:               $oc-gray-8 !default;
-$background-color:           $oc-black  !default;
-$color:                      $oc-gray-2 !default;
-$color-link:                 $oc-cyan-6 !default;
-$color-link-focus:           $oc-cyan-3 !default;
-$color-link-active:          $oc-cyan-0 !default;
-$color-heading:              $oc-gray-4 !default;
+$action-color:                           $oc-cyan-6                   !default;
+$action-focus-color:                     $oc-cyan-3                   !default;
+$action-active-color:                    $oc-cyan-0                   !default;
+$border-color:                           $oc-gray-8                   !default;
+$background-color:                       $oc-black                    !default;
+$background-color-button:                $action-color                !default;
+$background-color-button-focus:          $action-focus-color          !default;
+$background-color-button-active:         $action-active-color         !default;
+$color:                                  $oc-gray-2                   !default;
+$color-link:                             $action-color                !default;
+$color-link-focus:                       $action-focus-color          !default;
+$color-link-active:                      $action-active-color         !default;
+$color-heading:                          $oc-gray-4                   !default;
+$color-button:                           $background-color            !default;
 
-$background-color-selection: $oc-cyan-0 !default;
-$color-selection:            $oc-black  !default;
+$action-color-inverse:                   $oc-cyan-9                   !default;
+$action-color-focus-inverse:             $oc-gray-7                   !default;
+$action-color-active-inverse:            $oc-gray-9                   !default;
+$border-color-inverse:                   $oc-gray-3                   !default;
+$background-color-inverse:               $oc-white                    !default;
+$background-color-button-inverse:        $action-color-inverse        !default;
+$background-color-button-focus-inverse:  $action-color-focus-inverse  !default;
+$background-color-button-active-inverse: $action-color-active-inverse !default;
+$color-inverse:                          $oc-gray-8                   !default;
+$color-link-inverse:                     $action-color-inverse        !default;
+$color-link-focus-inverse:               $action-color-focus-inverse  !default;
+$color-link-active-inverse:              $action-color-active-inverse !default;
+$color-heading-inverse:                  $oc-gray-7                   !default;
+$color-button-inverse:                   $background-color-inverse    !default;
 
-$border-color-inverse:       $oc-gray-3 !default;
-$background-color-inverse:   $oc-white  !default;
-$color-inverse:              $oc-gray-8 !default;
-$color-link-inverse:         $oc-cyan-9 !default;
-$color-link-focus-inverse:   $oc-gray-7 !default;
-$color-link-active-inverse:  $oc-gray-9 !default;
-$color-heading-inverse:      $oc-gray-7 !default;
+
+$background-color-selection:      $oc-cyan-0                !default;
+$color-selection:                 $oc-black                 !default;
