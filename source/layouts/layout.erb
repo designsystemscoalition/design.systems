@@ -1,85 +1,79 @@
-<!DOCTYPE html>
-<html class="no-js <%= page_classes %> uik-t-default" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge" />
+<% wrap_layout :scaffold do %>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
 
-    <title><%= current_page.data.title || data.site.title %></title>
-
-    <meta name="description"
-          content="<%= current_page.data.description || data.site.description %>" />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1" />
-
-    <link rel="manifest"
-          href="site.webmanifest" />
-    <%= favicon_tag 'icon.png', rel: "apple-touch-icon" %>
-
-    <%= stylesheet_link_tag :site %>
-  </head>
-
-  <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
-
-    <main role="main">
-      <div class="uik-l-container uik-l-padding-bottom-large">
-        <div class="uik-l-grid uik-l-grid--gutters-x-large uik-l-grid--full uik-l-large-grid--fit">
-          <div class="uik-l-grid__cell">
-            <h1><%= current_page.data.title || data.site.title %></h1>
-            <p><%= current_page.data.description || data.site.description %></p>
-          </div>
+  <main role="main">
+    <div class="uik-l-container uik-l-padding-bottom-large">
+      <div class="uik-l-grid uik-l-grid--gutters-x-large uik-l-grid--full uik-l-large-grid--fit">
+        <div class="uik-l-grid__cell">
+          <h1><%= current_page.data.title || data.site.title %></h1>
+          <p><%= current_page.data.description || data.site.description %></p>
         </div>
       </div>
+    </div>
 
-      <% if current_page.data.home != 'true' %>
-        <div class="uik-t-inverse">
-      <% end %>
+    <% if current_page.data.home != 'true' %>
+      <div class="uik-t-inverse">
+    <% end %>
 
-      <div class="uik-l-container uik-l-padding-top-large uik-l-padding-bottom-large">
-        <div class="uik-l-grid uik-l-grid--gutters">
-          <div class="uik-l-grid__cell"><%= yield %></div>
-        </div>
+    <div class="uik-l-container uik-l-padding-top-large uik-l-padding-bottom-large">
+      <div class="uik-l-grid uik-l-grid--gutters">
+        <div class="uik-l-grid__cell"><%= yield %></div>
       </div>
+    </div>
 
-      <% if current_page.data.home != 'true' %>
-        </div>
-      <% end %>
+    <% if current_page.data.home != 'true' %>
       </div>
-    </main>
+    <% end %>
+    </div>
+  </main>
 
-    <hr class="uik-u-hidden" />
+  <hr class="uik-u-hidden" />
 
-    <nav role="navigation" class="uik-l-container uik-l-padding-top-large uik-l-padding-bottom-large">
-      <ul class="uik-l-grid uik-l-grid--gutters uik-l-grid--full uik-l-large-grid--fit">
-        <li class="uik-l-grid__cell">
-          <%= link_to "Slack", "http://slack.design.systems" %>
-        </li>
+  <nav role="navigation" class="uik-l-container uik-l-padding-top-large uik-l-padding-bottom-large">
+    <ul class="uik-l-grid uik-l-grid--gutters uik-l-grid--full uik-l-large-grid--fit">
+      <li class="uik-l-grid__cell">
+        <%= link_to "Clarity", "https://www.clarityconf.com" %>
+      </li>
 
-        <li class="uik-l-grid__cell">
-          <%= link_to "Publication", "http://publication.design.systems" %>
-        </li>
+      <li class="uik-l-grid__cell is-active">
+        <%= link_to "Coalition", "http://coalition.design.systems" %>
+      </li>
 
-        <li class="uik-l-grid__cell is-active">
-          <%= link_to "Coalition", "http://coalition.design.systems" %>
-        </li>
+      <li class="uik-l-grid__cell">
+        <%= link_to "Handbook", "https://www.designbetter.co/design-systems-handbook" %>
+      </li>
 
-        <li class="uik-l-grid__cell">
-          <%= link_to "News", "http://news.design.systems" %>
-        </li>
-      </ul>
-    </nav>
+      <li class="uik-l-grid__cell">
+        <%= link_to "News", "http://news.design.systems" %>
+      </li>
 
-    <%= javascript_include_tag "vendor/modernizr-3.5.0.min.js" %>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-    <%= javascript_include_tag :site %>
-    <script>
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-      ga('create','UA-19273722-7','auto');ga('send','pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-  </body>
-</html>
+      <li class="uik-l-grid__cell">
+        <%= link_to "Publication", "http://publication.design.systems" %>
+      </li>
+
+      <li class="uik-l-grid__cell">
+        <%= link_to "Slack", "http://slack.design.systems" %>
+      </li>
+    </ul>
+  </nav>
+
+  <hr class="uik-u-hidden" />
+
+  <footer role="contentinfo">
+    <div class="uik-l-container uik-l-padding-bottom-large">
+      <p>
+        <%= link_to "design.systems", "http://design.systems" %> is created by
+        <%= link_to "Jina Anne", "http://jina.me" %> of
+        <%= link_to "Sushi & Robots", "https://www.sushiandrobots.com" %>
+      </p>
+
+      <p>
+        Thank you <%= link_to "Webflow", "https://webflow.com" %> for your
+        🌕 Full Moon patronage.
+        <%= link_to "Support this project on&nbsp;Patreon", "https://www.patreon.com/sushiandrobots" %>
+      </p>
+    </div>
+  </footer>
+<% end %>
