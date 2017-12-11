@@ -1,13 +1,19 @@
 /* BASE */
 
-$heading-elements: h1, h2, h3               !default;
+$heading-elements: h1, h2, h3, legend       !default;
 $block-elements:   $heading-elements, p, ul !default;
 
 
 
+*,
+*:before,
+*:after { box-sizing: border-box; }
+
 html {
   font-size: 100%;
   line-height: $line-height;
+  background-color: $background-color;
+  color: $color;
 }
 
 body {
@@ -42,10 +48,22 @@ fieldset {
 #{$heading-elements} { line-height: $line-height-reset; }
 
 h1 { @include type-heading-xx-large; }
-h2 { @include type-heading-x-large;  }
+
+h2,
+legend { @include type-heading-x-large;  }
+
 h3 { @include type-heading-large;    }
 
-ul ul { margin-left: $spacing-horizontal-large; }
+ul {
+  margin-left: $spacing-horizontal-large;
+
+  > li > ul {
+    margin: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
 
 hr,
 fieldset { border: 0; }
@@ -69,13 +87,20 @@ video { vertical-align: middle; }
 
 textarea { resize: vertical; }
 
+legend {
+  float: left;
+  width: 100%;
+}
+
 @mixin base-small {
   // styles
 }
 
 @mixin base-medium {
   h1 { @include type-heading-xxx-large; }
-  h2 { @include type-heading-xx-large;  }
+
+  h2,
+  legend { @include type-heading-xx-large;  }
 }
 
 @mixin base-large {

@@ -25,6 +25,11 @@
 
   hr { border-color: $theme-border-color; }
 
+  .uik-c-input {
+    border-color: $theme-border-color;
+    background-color: $theme-background-color;
+  }
+
   .uik-c-button {
     background-color: $theme-background-color-button;
 

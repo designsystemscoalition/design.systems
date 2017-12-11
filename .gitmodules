@@ -1,0 +1,3 @@
+[submodule "source/slack"]
+	path = source/slack
+	url = https://github.com/sushiandrobots/design-systems-slack

@@ -4,8 +4,32 @@
     left:  auto;
   };
   padding: {
-    right: $spacing-horizontal-large;
-    left:  $spacing-horizontal-large;
+    right: $spacing-horizontal;
+    left:  $spacing-horizontal;
   };
   max-width: $max-width-page;
+}
+
+@mixin containers-small {
+  .uik-l-container {
+    // do nothing
+  }
+}
+
+@mixin containers-medium {
+  .uik-l-container {
+    padding: {
+      right: $spacing-horizontal-large;
+      left:  $spacing-horizontal-large;
+    };
+  }
+}
+
+@mixin containers-large {
+  .uik-l-container {
+    padding: {
+      right: $spacing-horizontal-x-large;
+      left:  $spacing-horizontal-x-large;
+    };
+  }
 }
