@@ -17,6 +17,7 @@ set :css_dir,        'assets/css'
 set :images_dir,     'assets/img'
 set :js_dir,         'assets/js'
 
+ignore "/slack/.git"
 ignore "/slack/README"
 
 configure :build do
