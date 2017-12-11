@@ -17,6 +17,8 @@ set :css_dir,        'assets/css'
 set :images_dir,     'assets/img'
 set :js_dir,         'assets/js'
 
+ignore "/slack/README"
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
