@@ -1,7 +1,6 @@
 activate :autoprefixer
 activate :directory_indexes
 activate :livereload
-activate :sprockets
 
 activate :deploy do |deploy|
   deploy.branch         = 'gh-pages'
