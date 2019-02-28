@@ -15,6 +15,10 @@
       name: 'Josh Silverman'
       url:  'http://www.mynameisjoshsilverman.com/'
 
+    -
+      name: 'Mina Markham'
+      url:  'http://mina.codes'
+
 
 
 -
@@ -28,6 +32,12 @@
       name: 'Diana Mounter'
       url:  'http://broccolini.net/'
       lead: true
+    -
+      name: 'Brent Jackson'
+      url:  'https://jxnblk.com/'
+    -
+      name: 'Chesley Andrews'
+      url:  'http://chesleyandrews.com/'
     -
       name: 'Tom Takigayama'
       url:  'http://www.tomtaki.com/'
